@@ -1,0 +1,19 @@
+.navbar {
+    height: 80px;
+    padding: 10px 2rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: royalblue;
+    position: relative;
+    
+   
+}
+.link {
+    text-decoration: none;
+    color: white;
+}
+.link span {
+    font-size: 20px;
+}
