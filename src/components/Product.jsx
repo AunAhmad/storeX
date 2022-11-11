@@ -9,10 +9,12 @@ import { addProd } from '../redux/cartSlice'
 
 const Product = ({id,title,desc,price,image}) => {
 
-    const products = {
+    const product = {
         id: id,
         title: title,
-        price: price
+        price: price,
+        image: image,
+        qty: 1
     }
 
     const dispatch = useDispatch()
@@ -23,10 +25,10 @@ const Product = ({id,title,desc,price,image}) => {
       <div className="prod_desc">
         <h2>{title}</h2>
         <p>{desc}</p>
-        <h4 className="price">{price}</h4>
+        <h4 className="price">{price}$</h4>
         <div className="scale">
         <span className="minus">-</span><span className="number">0</span><span className="plus">+</span></div>
-        <button onClick={()=>dispatch(addProd(products))}>Add To Cart</button>
+        <button onClick={()=>dispatch(addProd(product))}>Add To Cart</button>
       </div>
       </div>
     </div>
