@@ -8,3 +8,16 @@
     height: 50px;
     margin-bottom: 20px;
 }
+.qty {
+    text-align: end;
+}
+
+.item .price {
+   text-align: end;
+}
+.subtotal {
+    text-align: end;
+}
+.item span{
+    width: 200px;
+}
