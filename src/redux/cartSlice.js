@@ -19,7 +19,7 @@ const cartSlice = createSlice({
           (prod) => prod.id === action.payload.id
         );
         state.products[foundIndex].qty += 1;
-        state.products[foundIndex].price += action.payload.price;
+        state.products[foundIndex].subtotal += action.payload.price;
         state.totalPrice += action.payload.price;
         console.log(found);
       } else {

@@ -14,7 +14,8 @@ const Product = ({id,title,desc,price,image}) => {
         title: title,
         price: price,
         image: image,
-        qty: 1
+        qty: 1,
+        subtotal: price
     }
 
     const dispatch = useDispatch()
