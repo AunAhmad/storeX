@@ -14,7 +14,7 @@ useEffect(()=>{
   .then((data)=>{
     setProducts(data.products)})
 },[])
- 
+ console.log(products)
   
 
             
@@ -23,7 +23,7 @@ useEffect(()=>{
    <div className="products">
     {products.map((prod)=>{
       return (
-        <Product key={prod.id} title={prod.title} desc={prod.description} price={prod.price} image={prod.images[0]} />
+        <Product key={prod.id} id={prod.id} title={prod.title} desc={prod.description} price={prod.price} image={prod.images[0]} />
       )
     })}
    </div>

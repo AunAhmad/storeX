@@ -1,0 +1,15 @@
+.container {
+   padding: 8rem 5rem;  
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total {
+
+    padding: 2rem 5rem;
+
+}
