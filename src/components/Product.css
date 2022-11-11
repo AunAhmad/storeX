@@ -1,10 +1,10 @@
 .home {
     height: 40vh;
-   
 }
 .home_wrapper {
     display: flex;
     gap:2rem;
+    padding-top: 150px;
 }
 .image {
     display: grid;
