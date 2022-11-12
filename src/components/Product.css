@@ -18,11 +18,18 @@
 }
 
 .scale {
-    margin-bottom: 0.5rem;
-    width: 8%;
-    font-size: 2rem;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.scale span {
+    font-size: 25px;
+    margin: 0 5px;
+}
+
+.btn {
+    font-size: 20px;
 }
 .add_to_cart {
     padding: 5px 9px;
