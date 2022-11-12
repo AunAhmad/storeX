@@ -24,3 +24,11 @@
     display: flex;
     justify-content: space-between;
 }
+.add_to_cart {
+    padding: 5px 9px;
+    font-weight: bold;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
