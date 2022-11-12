@@ -6,9 +6,13 @@ import CartItem from '../../components/CartItem'
 const Cart = () => {
   
 
+  
+
   const count = useSelector((state)=>state.cart.count)
   const totalPrice = useSelector((state)=>state.cart.totalPrice)
-  const products = useSelector((state)=>state.cart.products)
+  const products = useSelector((state)=>state.cart.products);
+
+
 
   return (
     <div className='container'>

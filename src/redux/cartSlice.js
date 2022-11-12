@@ -28,9 +28,49 @@ const cartSlice = createSlice({
         state.totalPrice += action.payload.price;
       }
     },
+    increaseProd(state, action) {
+      const filterProd = state.products.filter(
+        (prod) => prod.id === action.payload.id
+      );
+      const found = state.products.includes(filterProd[0]);
+      if (found) {
+        state.count += 1;
+        const foundIndex = state.products.findIndex(
+          (prod) => prod.id === action.payload.id
+        );
+        state.products[foundIndex].qty += 1;
+        state.products[foundIndex].subtotal += action.payload.price;
+        state.totalPrice += action.payload.price;
+        console.log(found);
+      } else {
+        state.products.push(action.payload);
+        state.count = state.count + 1;
+        state.totalPrice += action.payload.price;
+      }
+    },
+    decreaseProd(state, action) {
+      const filterProd = state.products.filter(
+        (prod) => prod.id === action.payload.id
+      );
+      const found = state.products.includes(filterProd[0]);
+      if (found) {
+        state.count -= 1;
+        const foundIndex = state.products.findIndex(
+          (prod) => prod.id === action.payload.id
+        );
+        state.products[foundIndex].qty -= 1;
+        state.products[foundIndex].subtotal -= action.payload.price;
+        state.totalPrice -= action.payload.price;
+        console.log(found);
+      } else {
+        state.products.push(action.payload);
+        state.count = state.count + 1;
+        state.totalPrice += action.payload.price;
+      }
+    },
   },
 });
 
 export default cartSlice.reducer;
 
-export const { addProd } = cartSlice.actions;
+export const { addProd, increaseProd, decreaseProd } = cartSlice.actions;
