@@ -12,7 +12,9 @@ const Cart = () => {
   const totalPrice = useSelector((state)=>state.cart.totalPrice)
   const products = useSelector((state)=>state.cart.products);
   
-
+  const submitProd = ()=>{
+    console.log(products)
+  }
 
   return (
     <div className='container'>
@@ -27,10 +29,12 @@ const Cart = () => {
       })}
       </div>
       <div className="cart">
-       <h3>Cart Totals</h3>
+       
        <div className="total">
-        <span className='total_text'>Total</span>
+        <h3>Cart Totals</h3>
+        
         <span className="total_price">$ {totalPrice}</span>
+        {totalPrice>0&&<span onClick={submitProd} className="checkout">Checkout</span>}
        </div>
 
       </div>

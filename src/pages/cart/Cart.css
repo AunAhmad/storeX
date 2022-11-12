@@ -2,14 +2,25 @@
    padding: 8rem 5rem;  
 }
 
-.cart {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 
 .total {
 
     padding: 2rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+}
+
+.total_price {
+    font-weight: bold;
+}
+
+.checkout {
+    background-color: crimson;
+    padding: 9px 18px;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
 }
