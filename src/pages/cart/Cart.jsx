@@ -4,14 +4,14 @@ import {useSelector,useDispatch} from 'react-redux'
 import CartItem from '../../components/CartItem'
 
 const Cart = () => {
-  
+  const [cartItem,setCartItem] = useState(true);
 
-  
+ 
 
   const count = useSelector((state)=>state.cart.count)
   const totalPrice = useSelector((state)=>state.cart.totalPrice)
   const products = useSelector((state)=>state.cart.products);
-
+  
 
 
   return (
@@ -19,9 +19,11 @@ const Cart = () => {
       <div className="items">
       
       {products.map((prod)=>{
-        return (
-          <CartItem key={prod.id} item={prod}/>
-        )
+        if(prod.qty>0){
+          return(
+            <CartItem key={prod.id} item={prod} />
+          )
+        }
       })}
       </div>
       <div className="cart">
