@@ -3,7 +3,7 @@ import './Thank.css'
 const Thank = () => {
   return (
     <div className='thank'>
-      <h1>Thank You for buying</h1>
+      <h1>Thank You for your purchase!</h1>
     </div>
   )
 }
