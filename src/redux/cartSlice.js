@@ -63,6 +63,10 @@ const cartSlice = createSlice({
         state.totalPrice -= action.payload.price;
         console.log(found);
       }
+      if (found && state.products[foundIndex].qty < 1) {
+        state.products.splice(foundIndex, 1);
+      }
+
       // } else if (!found && state.count > 0) {
       //   state.products.push(action.payload);
       //   state.count = state.count - 1;
