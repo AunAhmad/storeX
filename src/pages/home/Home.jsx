@@ -14,7 +14,7 @@ useEffect(()=>{
   .then((data)=>{
     setProducts(data.products)})
 },[])
- console.log(products)
+ 
   
 
             

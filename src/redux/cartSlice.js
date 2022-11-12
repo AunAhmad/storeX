@@ -25,7 +25,6 @@ const cartSlice = createSlice({
         state.products[foundIndex].qty += 1;
         state.products[foundIndex].subtotal += action.payload.price;
         state.totalPrice += action.payload.price;
-        console.log(found);
       }
     },
     incQty(state, action) {
@@ -41,7 +40,6 @@ const cartSlice = createSlice({
         state.products[foundIndex].qty += 1;
         state.products[foundIndex].subtotal += action.payload.price;
         state.totalPrice += action.payload.price;
-        console.log(found);
       } else {
         state.products.push(action.payload);
         state.count = state.count + 1;
@@ -61,7 +59,6 @@ const cartSlice = createSlice({
         state.products[foundIndex].qty -= 1;
         state.products[foundIndex].subtotal -= action.payload.price;
         state.totalPrice -= action.payload.price;
-        console.log(found);
       }
       if (found && state.products[foundIndex].qty < 1) {
         state.products.splice(foundIndex, 1);
